@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Task2",
+            "request": "launch",
+            "mainClass": "Task2",
+            "projectName": "Java_1_30737a34"
+        },
+        {
+            "type": "java",
+            "name": "Task1",
+            "request": "launch",
+            "mainClass": "Task1",
+            "projectName": "Java_1_30737a34"
+        },
+        {
             "name": "Python Debugger: Current File",
             "type": "debugpy",
             "request": "launch",

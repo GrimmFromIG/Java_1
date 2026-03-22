@@ -1,11 +1,7 @@
-import java.io.PrintStream;
-import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
-public class main {
+public class Task1 {
     public static void main(String[] args) {
-        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
-        
         System.out.println("Виконав: Прізвище Б.С.");
         System.out.println("-------------------------------------------------");
 
