@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Task3",
+            "request": "launch",
+            "mainClass": "Task3",
+            "projectName": "Java_1_30737a34"
+        },
+        {
+            "type": "java",
+            "name": "WarehouseApp",
+            "request": "launch",
+            "mainClass": "WarehouseApp",
+            "projectName": "Java_1_30737a34"
+        },
+        {
+            "type": "java",
             "name": "Homework1",
             "request": "launch",
             "mainClass": "Homework1",
