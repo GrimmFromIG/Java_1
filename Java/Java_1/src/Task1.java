@@ -12,7 +12,7 @@ public class Task1 {
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                A[i][j] = random.nextInt(21) - 10; 
+                A[i][j] = (random.nextInt(25)*2) + 1; 
             }
         }
 
