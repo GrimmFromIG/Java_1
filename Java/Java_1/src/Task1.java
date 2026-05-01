@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Task1 {
     public static void main(String[] args) {
-        System.out.println("Виконав: Прізвище Б.С.");
+        System.out.println("Виконав: Петрощук Б.С.");
         System.out.println("-------------------------------------------------");
 
         int rows = 5;
