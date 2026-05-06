@@ -1,12 +1,8 @@
-import java.io.PrintStream;
-import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
-public class main {
+public class Task1 {
     public static void main(String[] args) {
-        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
-        
-        System.out.println("Виконав: Прізвище Б.С.");
+        System.out.println("Виконав: Петрощук Б.С.");
         System.out.println("-------------------------------------------------");
 
         int rows = 5;
@@ -16,7 +12,7 @@ public class main {
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                A[i][j] = random.nextInt(21) - 10; 
+                A[i][j] = (random.nextInt(25)*2) + 1; 
             }
         }
 
