@@ -1,0 +1,30 @@
+Line 1: asdasdasdasda
+--- Count of letter 'á': 0 ---
+
+Line 2: asdasdasdasdaasd
+--- Count of letter 'á': 0 ---
+
+Line 3: asdasdasdasdaasdda
+--- Count of letter 'á': 0 ---
+
+Line 4: searchDas
+--- Count of letter 'á': 0 ---
+
+Line 5: dateg
+--- Count of letter 'á': 0 ---
+
+Line 6: sdf
+--- Count of letter 'á': 0 ---
+
+Line 7: hgf
+--- Count of letter 'á': 0 ---
+
+Line 8: gjh
+--- Count of letter 'á': 0 ---
+
+Line 9: gyyjk
+--- Count of letter 'á': 0 ---
+
+Line 10: ghsdfsdfgfhgfgh
+--- Count of letter 'á': 0 ---
+

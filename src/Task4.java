@@ -28,16 +28,8 @@ public class Task4 {
                 return;
             }
         } else {
-            System.out.print("Enter the path to the INPUT file (e.g., input.txt or C:\\folder\\file.txt): ");
-            inputFilePath = scanner.nextLine().replace("\"", "").trim();
-            
-            File checkFile = new File(inputFilePath);
-            if (!checkFile.exists() || !checkFile.isFile()) {
-                System.out.println("\nERROR: File does not exist!");
-                System.out.println("Java looked for it exactly here: " + checkFile.getAbsolutePath());
-                System.out.println("Please check the name and extension (e.g., make sure it's not .txt.txt).");
-                return;
-            }
+            System.out.print("Enter the path to the INPUT file (e.g., input.txt): ");
+            inputFilePath = scanner.nextLine();
         }
 
         System.out.print("Enter the letter to search for: ");
@@ -64,7 +56,7 @@ public class Task4 {
         System.out.println("\n=== FILE PROCESSING STARTED ===");
         System.out.println("Searching for letter: '" + targetLetter + "'");
 
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(inputFilePath), "UTF-8"));
+        try (BufferedReader reader = new BufferedReader(new FileReader(inputFilePath));
              BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
 
             System.out.println("Files opened successfully. Starting to read and write...\n");
@@ -87,7 +79,7 @@ public class Task4 {
             }
 
             System.out.println("\n=== PROCESSING COMPLETED SUCCESSFULLY ===");
-            System.out.println("Results have been saved to: " + new File(outputFilePath).getAbsolutePath());
+            System.out.println("Results have been saved to: " + outputFilePath);
 
         } catch (FileNotFoundException e) {
             System.out.println("\nERROR: Input file not found! Check the path: " + inputFilePath);
