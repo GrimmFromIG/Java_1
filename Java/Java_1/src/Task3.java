@@ -34,25 +34,25 @@ class Product {
 public class Task3 {
     public static void main(String[] args) {
         Product[] products = {
-            new Product("R001", "Шуруповерт", "DCD771", 50, "DeWalt", 3500.0, "2023-05-10"),
-            new Product("R002", "Дриль", "GSB 13 RE", 30, "Bosch", 2100.50, "2023-08-21"),
-            new Product("R003", "Шуруповерт", "GSR 120-LI", 45, "Bosch", 3200.0, "2024-01-15"),
-            new Product("R004", "Болгарка", "GA5030", 25, "Makita", 1850.0, "2023-11-05"),
-            new Product("R005", "Перфоратор", "GBH 2-26", 20, "Bosch", 5400.0, "2024-02-20")
+            new Product("R001", "Screwdriver", "DCD771", 50, "DeWalt", 3500.0, "2023-05-10"),
+            new Product("R002", "Drill", "GSB 13 RE", 30, "Bosch", 2100.50, "2023-08-21"),
+            new Product("R003", "Screwdriver", "GSR 120-LI", 45, "Bosch", 3200.0, "2024-01-15"),
+            new Product("R004", "Grinder", "GA5030", 25, "Makita", 1850.0, "2023-11-05"),
+            new Product("R005", "Rotary Hammer", "GBH 2-26", 20, "Bosch", 5400.0, "2024-02-20")
         };
 
-        System.out.println("Вихідні дані (Склад промислових товарів):");
+        System.out.println("Initial Data (Industrial Goods Warehouse):");
         printFullTable(products);
 
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
         while (running) {
-            System.out.println("\nОберіть дію для пошуку:");
-            System.out.println("1 - Знайти товари заданої фірми виробника");
-            System.out.println("2 - Знайти фірми, ціни та кількість для заданого товару");
-            System.out.println("0 - Вихід з програми");
-            System.out.print("Ваш вибір: ");
+            System.out.println("\nSelect an action:");
+            System.out.println("1 - Find products by manufacturer");
+            System.out.println("2 - Find manufacturer, price, and quantity for a specific product");
+            System.out.println("0 - Exit program");
+            System.out.print("Your choice: ");
 
             int choice = -1;
             
@@ -60,28 +60,28 @@ public class Task3 {
                 choice = scanner.nextInt();
                 scanner.nextLine(); 
             } catch (InputMismatchException e) {
-                System.out.println("\nПОМИЛКА: Невірний тип даних. Будь ласка, введіть ціле число.");
+                System.out.println("\nERROR: Invalid data type. Please enter an integer.");
                 scanner.nextLine(); 
                 continue; 
             }
 
             switch (choice) {
                 case 1:
-                    System.out.print("Введіть назву фірми виробника (наприклад, Bosch): ");
+                    System.out.print("Enter manufacturer name (e.g., Bosch): ");
                     String searchManufacturer = scanner.nextLine();
                     searchByManufacturer(products, searchManufacturer);
                     break;
                 case 2:
-                    System.out.print("Введіть назву товару (наприклад, Шуруповерт): ");
+                    System.out.print("Enter product name (e.g., Screwdriver): ");
                     String searchName = scanner.nextLine();
                     searchByProductName(products, searchName);
                     break;
                 case 0:
                     running = false;
-                    System.out.println("Роботу програми завершено.");
+                    System.out.println("Program terminated.");
                     break;
                 default:
-                    System.out.println("\nПОМИЛКА: Невірний вибір. Оберіть 1, 2 або 0.");
+                    System.out.println("\nERROR: Invalid choice. Select 1, 2, or 0.");
             }
         }
         scanner.close();
@@ -90,7 +90,7 @@ public class Task3 {
     private static void printHeader() {
         printSeparator();
         System.out.printf("| %-10s | %-15s | %-10s | %-8s | %-15s | %-8s | %-12s |\n",
-                "Реєстр. №", "Назва", "Модель", "Кільк.", "Виробник", "Ціна", "Дата виг.");
+                "Reg. No.", "Name", "Model", "Quantity", "Manufacturer", "Price", "Mfg. Date");
         printSeparator();
     }
 
@@ -107,7 +107,7 @@ public class Task3 {
     }
 
     private static void searchByManufacturer(Product[] products, String manufacturer) {
-        System.out.println("\nРезультати пошуку для виробника: " + manufacturer);
+        System.out.println("\nSearch results for manufacturer: " + manufacturer);
         printHeader();
         boolean found = false;
         for (Product p : products) {
@@ -118,14 +118,14 @@ public class Task3 {
         }
         printSeparator();
         if (!found) {
-            System.out.println("Дані за заданим критерієм пошуку відсутні.");
+            System.out.println("No data found for the given search criteria.");
         }
     }
 
     private static void searchByProductName(Product[] products, String name) {
-        System.out.println("\nРезультати пошуку для товару: " + name);
+        System.out.println("\nSearch results for product: " + name);
         System.out.println("---------------------------------------------------------");
-        System.out.printf("| %-15s | %-8s | %-8s |\n", "Виробник", "Ціна", "Кількість");
+        System.out.printf("| %-15s | %-8s | %-8s |\n", "Manufacturer", "Price", "Quantity");
         System.out.println("---------------------------------------------------------");
         boolean found = false;
         for (Product p : products) {
@@ -136,7 +136,7 @@ public class Task3 {
         }
         System.out.println("---------------------------------------------------------");
         if (!found) {
-            System.out.println("Дані за заданим критерієм пошуку відсутні.");
+            System.out.println("No data found for the given search criteria.");
         }
     }
 }
