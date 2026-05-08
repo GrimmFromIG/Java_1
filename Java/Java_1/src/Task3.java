@@ -20,6 +20,7 @@ class Product {
         this.date = date;
     }
 
+    public String getRegNumber() { return regNumber; }
     public String getName() { return name; }
     public String getManufacturer() { return manufacturer; }
     public double getPrice() { return price; }
@@ -51,6 +52,7 @@ public class Task3 {
             System.out.println("\nSelect an action:");
             System.out.println("1 - Find products by manufacturer");
             System.out.println("2 - Find manufacturer, price, and quantity for a specific product");
+            System.out.println("3 - Find product by registration number");
             System.out.println("0 - Exit program");
             System.out.print("Your choice: ");
 
@@ -76,12 +78,17 @@ public class Task3 {
                     String searchName = scanner.nextLine();
                     searchByProductName(products, searchName);
                     break;
+                case 3:
+                    System.out.print("Enter registration number (e.g., R001): ");
+                    String searchRegNum = scanner.nextLine();
+                    searchByRegNumber(products, searchRegNum);
+                    break;
                 case 0:
                     running = false;
                     System.out.println("Program terminated.");
                     break;
                 default:
-                    System.out.println("\nERROR: Invalid choice. Select 1, 2, or 0.");
+                    System.out.println("\nERROR: Invalid choice. Select 1, 2, 3, or 0.");
             }
         }
         scanner.close();
@@ -135,6 +142,23 @@ public class Task3 {
             }
         }
         System.out.println("---------------------------------------------------------");
+        if (!found) {
+            System.out.println("No data found for the given search criteria.");
+        }
+    }
+
+    private static void searchByRegNumber(Product[] products, String regNumber) {
+        System.out.println("\nSearch results for registration number: " + regNumber);
+        printHeader();
+        boolean found = false;
+        for (Product p : products) {
+            if (p.getRegNumber().equalsIgnoreCase(regNumber)) {
+                p.printRow();
+                found = true;
+                break;
+            }
+        }
+        printSeparator();
         if (!found) {
             System.out.println("No data found for the given search criteria.");
         }
