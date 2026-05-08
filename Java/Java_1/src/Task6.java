@@ -35,22 +35,22 @@ class Point {
 public class Task6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введіть кількість точок для генерації у кожній множині: ");
+        System.out.print("Enter the number of points to generate for each set: ");
         int count = scanner.nextInt();
 
         Set<Point> set1 = generateRandomPoints(count, 10);
         Set<Point> set2 = generateRandomPoints(count, 10);
 
-        System.out.println("\nМножина 1: " + set1);
-        System.out.println("Множина 2: " + set2);
+        System.out.println("\nSet 1: " + set1);
+        System.out.println("Set 2: " + set2);
 
         Set<Point> intersection = new HashSet<>(set1);
         intersection.retainAll(set2);
-        System.out.println("\nПеретин (спільні точки): " + intersection);
+        System.out.println("\nIntersection (common points): " + intersection);
 
         Set<Point> difference = new HashSet<>(set1);
         difference.removeAll(set2);
-        System.out.println("Різниця (Множина 1 мінус Множина 2): " + difference);
+        System.out.println("Difference (Set 1 minus Set 2): " + difference);
         
         scanner.close();
     }

@@ -1,0 +1,30 @@
+Line 1: asdasdasdasda
+--- Count of letter 'a': 5 ---
+
+Line 2: asdasdasdasdaasd
+--- Count of letter 'a': 6 ---
+
+Line 3: asdasdasdasdaasdda
+--- Count of letter 'a': 7 ---
+
+Line 4: searchDas
+--- Count of letter 'a': 2 ---
+
+Line 5: dateg
+--- Count of letter 'a': 1 ---
+
+Line 6: sdf
+--- Count of letter 'a': 0 ---
+
+Line 7: hgf
+--- Count of letter 'a': 0 ---
+
+Line 8: gjh
+--- Count of letter 'a': 0 ---
+
+Line 9: gyyjk
+--- Count of letter 'a': 0 ---
+
+Line 10: ghsdfsdfgfhgfgh
+--- Count of letter 'a': 0 ---
+
